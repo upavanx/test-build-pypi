@@ -1,0 +1,6 @@
+<manifest>
+<main id="60c879c3b3d614002abd9c88" label="Intel_Edge_Software_Configurator" osId="5e81c3132ed228002ae08bc7" packageId="37241612-7c81-4543-972a-78b58efd2a05" version="v4.0" />
+<default esb_install="true" id="5e8c4742e02f17002a2a6976" label="esb_common" path="installation/common" />
+<project esb_install="true" id="5f213aae9e63c9002a6fd88e" label="Docker_Compose" path="installation/src" version="1.24.0" />
+<image id="60c8754811f708001f917696" label="esc_collectd" tag="latest" />
+</manifest>

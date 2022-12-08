@@ -1,0 +1,33 @@
+name: Template Check
+    
+on:
+  pull_request:
+    types:
+        - edited
+        - opened
+        - reopened
+    
+jobs:
+  build:
+    runs-on: [self-hosted]
+    
+    steps:
+    # Checkout the repository content to github runner.
+      - name: Check-out Repository
+        uses: actions/checkout@v2
+        with:
+            repository: intel-innersource/applications.devops.isdm.onboarding-kit
+            ref: main
+            token: ${{ secrets.AUTH_TOKEN }}
+            path: script
+            
+    # Running the label check script in PR.
+      - name: Getting Github Token & Running Script
+        env:
+            AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            PULL_REQUEST_NUMBER : ${{ github.event.pull_request.number }}
+            REPO_NAME : ${{ github.event.repository.name }}
+            OWNER: ${{ github.event.repository.owner.login }}
+        run: |
+            cd script
+            python3 template_check.py --auth_token=$AUTH_TOKEN --pull_number=$PULL_REQUEST_NUMBER --repo_name=$REPO_NAME --repo_org=$OWNER

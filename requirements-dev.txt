@@ -1,0 +1,16 @@
+# The order of packages is significant, because pip processes them in the order
+# of appearance. Changing the order has an impact on the overall integration
+# process, which may cause wedges in the gate later.
+
+setuptools>=57.4.0
+pyinstaller>=4.4
+Cython>=0.29.24
+bandit>=1.7.0
+flake8>=3.9.2
+pylint>=2.9.6
+pycodestyle
+pyflakes>=2.3.1
+black>=21.7b0
+isort>=5.9.3
+autopep8
+pre-commit

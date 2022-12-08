@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Add support for tox environment for automating tests such as flake8,
+    docs, releasenotes, bandit, testing.

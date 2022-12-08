@@ -1,0 +1,17 @@
+prettytable
+oyaml
+click
+requests
+defusedxml
+inputimeout
+termcolor
+wget
+pathlib2
+PyYAML>=5.4.1
+psutil
+#scp>=0.14.1
+#paramiko>=2.8.0
+ruamel.yaml
+pexpect
+docker
+inquirer
